@@ -6,7 +6,6 @@ import Dashboard from './pages/Dashboard';
 import Configurations from './pages/Configurations';
 import TestResults from './pages/TestResults/TestResults';
 import Reports from './pages/Reports';
-import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
             <Route path="/configurations" element={<Configurations />} />
             <Route path="/results" element={<TestResults />} />
             <Route path="/reports" element={<Reports />} />
-            <Route path="/settings" element={<Settings />} />
           </Routes>
         </Layout>
       </Router>

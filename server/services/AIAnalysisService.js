@@ -1,5 +1,8 @@
 import OpenAI from 'openai';
 import winston from 'winston';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const logger = winston.createLogger({
   level: 'info',
@@ -9,10 +12,15 @@ const logger = winston.createLogger({
 
 class AIAnalysisService {
   constructor() {
-    this.openai = process.env.OPENAI_API_KEY ? new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-    }) : null;
+  if (process.env.OPENAI_API_KEY) {
+    this.openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    logger.info("✅ OpenAI API key detected and client initialized");
+  } else {
+    this.openai = null;
+    logger.warn("⚠️ No OpenAI API key found, falling back to basic analysis");
   }
+}
+
 
   async analyzeTestResults(results) {
     if (!this.openai) {

@@ -10,7 +10,6 @@ import winston from 'winston';
 
 // Import routes
 import testRoutes from './routes/tests.js';
-import configRoutes from './routes/config.js';
 import reportRoutes from './routes/reports.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
@@ -21,6 +20,7 @@ const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+console.log("api key", process.env.OPENAI_API_KEY)
 
 // Logger configuration
 const logger = winston.createLogger({
@@ -67,7 +67,6 @@ mongoose.connect('mongodb+srv://sakshi:12345@cluster0.ncqttov.mongodb.net/', {
 
 // Routes
 app.use('/api/tests', testRoutes);
-app.use('/api/config', configRoutes);
 app.use('/api/reports', reportRoutes);
 
 // Health check endpoint

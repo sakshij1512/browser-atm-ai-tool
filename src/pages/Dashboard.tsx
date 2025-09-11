@@ -186,48 +186,6 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Quick Actions */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <button className="p-4 text-left border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-            <div className="flex items-center space-x-3">
-              <div className="p-2 bg-blue-100 rounded-lg">
-                <Globe className="h-5 w-5 text-blue-600" />
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900">New Test Configuration</h4>
-                <p className="text-sm text-gray-500">Set up a new website to monitor</p>
-              </div>
-            </div>
-          </button>
-
-          <button className="p-4 text-left border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-            <div className="flex items-center space-x-3">
-              <div className="p-2 bg-green-100 rounded-lg">
-                <Activity className="h-5 w-5 text-green-600" />
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900">Run All Tests</h4>
-                <p className="text-sm text-gray-500">Execute all active configurations</p>
-              </div>
-            </div>
-          </button>
-
-          <button className="p-4 text-left border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-            <div className="flex items-center space-x-3">
-              <div className="p-2 bg-purple-100 rounded-lg">
-                <TrendingUp className="h-5 w-5 text-purple-600" />
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900">View Reports</h4>
-                <p className="text-sm text-gray-500">Analyze performance trends</p>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
     </div>
   );
 };

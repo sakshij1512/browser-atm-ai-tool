@@ -31,12 +31,8 @@ export const testService = {
 
   // Reports
   getDashboardData: () => api.get('/reports/dashboard'),
-  getTrends: (days = 30) => api.get(`/reports/trends?days=${days}`),
   exportResults: (format: string, filters?: any) => 
     api.get(`/reports/export/${format}`, { params: filters }),
-
-  // Configuration
-  getSystemConfig: () => api.get('/config/system')
 };
 
 export default api;

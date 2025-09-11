@@ -23,7 +23,6 @@ const Sidebar: React.FC<SidebarProps> = ({ sidebarOpen, setSidebarOpen }) => {
     { name: "Test Configurations", href: "/configurations", icon: Settings },
     { name: "Test Results", href: "/results", icon: FileText },
     { name: "Reports", href: "/reports", icon: Activity },
-    { name: "Settings", href: "/settings", icon: Shield },
   ];
 
   const isActive = (path: string) => location.pathname === path;

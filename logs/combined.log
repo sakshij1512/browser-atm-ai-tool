@@ -1,95 +1,19 @@
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:23:50.182Z"}
-{"cause":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"localhost:27017":{"$clusterTime":null,"address":"localhost:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":602626792,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":null,"stale":false,"type":"Unknown"},"errorLabelSet":{},"level":"error","message":"MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"localhost:27017":{"$clusterTime":null,"address":"localhost:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":602626792,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":null,"stale":false,"type":"Unknown"},"stack":"MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at _handleConnectionErrors (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongoose\\lib\\connection.js:1165:11)\n    at NativeConnection.openUri (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongoose\\lib\\connection.js:1096:11)","timestamp":"2025-09-10T07:24:20.158Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:31:20.035Z"}
-{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorLabelSet":{},"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : authentication failed","ok":0},"level":"error","message":"MongoDB connection error: bad auth : authentication failed","ok":0,"stack":"MongoServerError: bad auth : authentication failed\n    at Connection.sendCommand (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:305:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Connection.command (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:333:26)\n    at async continueScramConversation (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:131:15)\n    at async executeScram (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:80:5)\n    at async ScramSHA1.auth (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:39:16)\n    at async performInitialHandshake (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:104:13)\n    at async connect (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:24:9)","timestamp":"2025-09-10T07:31:21.113Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:32:35.471Z"}
-{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorLabelSet":{},"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : authentication failed","ok":0},"level":"error","message":"MongoDB connection error: bad auth : authentication failed","ok":0,"stack":"MongoServerError: bad auth : authentication failed\n    at Connection.sendCommand (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:305:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Connection.command (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:333:26)\n    at async continueScramConversation (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:131:15)\n    at async executeScram (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:80:5)\n    at async ScramSHA1.auth (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:39:16)\n    at async performInitialHandshake (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:104:13)\n    at async connect (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:24:9)","timestamp":"2025-09-10T07:32:36.262Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:32:43.559Z"}
-{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorLabelSet":{},"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : authentication failed","ok":0},"level":"error","message":"MongoDB connection error: bad auth : authentication failed","ok":0,"stack":"MongoServerError: bad auth : authentication failed\n    at Connection.sendCommand (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:305:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Connection.command (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:333:26)\n    at async continueScramConversation (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:131:15)\n    at async executeScram (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:80:5)\n    at async ScramSHA1.auth (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:39:16)\n    at async performInitialHandshake (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:104:13)\n    at async connect (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:24:9)","timestamp":"2025-09-10T07:32:44.627Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:32:55.111Z"}
-{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorLabelSet":{},"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : authentication failed","ok":0},"level":"error","message":"MongoDB connection error: bad auth : authentication failed","ok":0,"stack":"MongoServerError: bad auth : authentication failed\n    at Connection.sendCommand (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:305:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Connection.command (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connection.js:333:26)\n    at async continueScramConversation (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:131:15)\n    at async executeScram (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:80:5)\n    at async ScramSHA1.auth (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:39:16)\n    at async performInitialHandshake (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:104:13)\n    at async connect (C:\\Users\\Virendra Wagh\\Documents\\Browser-atm-ai-tool\\node_modules\\mongodb\\lib\\cmap\\connect.js:24:9)","timestamp":"2025-09-10T07:32:55.714Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:34:06.506Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T07:34:07.546Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:52:29.047Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T07:52:31.047Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:54:27.126Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T07:54:28.337Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T07:58:48.538Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T07:58:50.239Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:01:42.888Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:01:45.118Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:01:46.089Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:01:57.717Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:01:58.446Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:02:12.791Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:02:13.729Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:02:31.564Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:02:32.377Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:04:04.234Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:04:05.666Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:04:19.168Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:04:20.078Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:04:48.828Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:04:49.385Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:06:27.942Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:06:28.617Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:06:33.774Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:06:34.260Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:06:44.444Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:06:44.923Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:06:48.871Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:06:49.434Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:06:52.492Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:06:53.115Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:06:58.660Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:06:59.214Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T08:07:02.713Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T08:07:03.312Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T11:26:21.817Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T11:26:23.693Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T11:33:45.885Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T11:33:49.783Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T11:34:21.912Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T11:34:23.638Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T12:36:00.881Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T12:36:02.643Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T12:42:03.430Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T12:42:05.351Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T17:41:02.770Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T17:41:18.971Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T17:41:25.630Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:01:50.196Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:01:53.073Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:13:58.283Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:14:00.510Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:17:04.519Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:17:07.798Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:19:11.779Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:19:12.853Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:19:27.295Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:19:28.403Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:20:52.688Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:20:54.200Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:23:02.803Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:23:04.366Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:26:39.307Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-10T18:26:47.169Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-10T18:26:48.860Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T06:31:56.583Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T06:31:59.315Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T06:33:49.414Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T06:33:50.899Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T06:34:44.898Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T06:34:46.718Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T06:37:31.208Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T06:37:32.099Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T06:38:20.232Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T06:38:21.341Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T07:34:53.404Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T07:34:54.656Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T07:35:09.053Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T07:35:09.766Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T07:38:05.600Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T07:38:06.771Z"}
-{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T07:38:58.849Z"}
-{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T07:38:59.401Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T14:58:57.928Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T14:58:58.492Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T15:00:03.888Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T15:03:33.416Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T15:03:34.375Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T15:10:32.403Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T15:10:34.355Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T15:11:57.454Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T15:12:06.663Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T17:48:17.397Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T17:48:18.991Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T18:31:42.212Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T18:31:44.573Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T18:34:17.218Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T18:34:18.636Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T18:36:21.021Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T18:36:23.760Z"}
+{"level":"info","message":"Server running on port 5000 in development mode","timestamp":"2025-09-11T19:12:39.860Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2025-09-11T19:12:41.011Z"}
