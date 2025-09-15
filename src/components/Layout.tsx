@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu } from "lucide-react";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SideBar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
