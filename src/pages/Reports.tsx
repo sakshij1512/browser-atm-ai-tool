@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BarChart3, Download, X } from 'lucide-react';
-import axios from 'axios';
+import React, { useEffect, useState, useMemo } from 'react';
+import { BarChart3, Download, X, Search } from 'lucide-react';
 
 interface Configuration {
   _id: string;
@@ -35,13 +34,15 @@ const Reports: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [selectedResult, setSelectedResult] = useState<TestResult | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const fetchAllResults = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:3000/api/tests/results/all?limit=10000`);
+      const res = await fetch(`http://localhost:3000/api/tests/results/all?limit=10000`);
+      const data = await res.json();
       // Increase limit as per your dataset
-      setResults(res.data.results || []);
+      setResults(data.results || []);
     } catch (err: any) {
       setError(err.message || 'Failed to load results');
     } finally {
@@ -64,6 +65,35 @@ const Reports: React.FC = () => {
   const getProblematicImages = (imageValidation: any[]) => {
     return imageValidation.filter(hasImageIssues);
   };
+
+  // Filter results based on search query
+  const filteredResults = useMemo(() => {
+    if (!searchQuery.trim()) return results;
+    
+    const query = searchQuery.toLowerCase().trim();
+    
+    return results.filter((result) => {
+      // Search in execution ID
+      if (result.executionId?.toLowerCase().includes(query)) return true;
+      
+      // Search in configuration name
+      if (result.configurationId?.name?.toLowerCase().includes(query)) return true;
+      
+      // Search in target URL
+      if (result.configurationId?.targetUrl?.toLowerCase().includes(query)) return true;
+      
+      // Search in platform
+      if (result.configurationId?.platform?.toLowerCase().includes(query)) return true;
+      
+      // Search in status
+      if (result.status?.toLowerCase().includes(query)) return true;
+      
+      // Search in start time (formatted date)
+      if (new Date(result.startTime).toLocaleString().toLowerCase().includes(query)) return true;
+      
+      return false;
+    });
+  }, [results, searchQuery]);
 
   useEffect(() => {
     fetchAllResults();
@@ -101,57 +131,80 @@ const Reports: React.FC = () => {
         </button>
       </div>
 
-      {/* Results Table */}
-      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-        {loading ? (
-          <p className="text-center py-8">Loading results...</p>
-        ) : error ? (
-          <p className="text-center py-8 text-red-500">{error}</p>
-        ) : results.length === 0 ? (
-          <p className="text-center py-8 text-gray-500">No test results found</p>
-        ) : (
-          <table className="w-full text-left text-sm">
-            <thead className="bg-gray-50 border-b">
-              <tr>
-                <th className="px-4 py-2">Execution ID</th>
-                <th className="px-4 py-2">Configuration</th>
-                <th className="px-4 py-2">Target URL</th>
-                <th className="px-4 py-2">Platform</th>
-                <th className="px-4 py-2">Status</th>
-                <th className="px-4 py-2">Start Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((r) => (
-                <tr
-                  key={r._id}
-                  className="border-b hover:bg-gray-50 cursor-pointer"
-                  onClick={() => setSelectedResult(r)}
-                >
-                  <td className="px-4 py-2 font-mono">{r.executionId}</td>
-                  <td className="px-4 py-2">{r.configurationId?.name || '-'}</td>
-                  <td className="px-4 py-2">{r.configurationId?.targetUrl}</td>
-                  <td className="px-4 py-2">{r.configurationId?.platform}</td>
-                  <td
-                    className={`px-4 py-2 font-medium ${
-                      r.status === 'passed'
-                        ? 'text-green-600'
-                        : r.status === 'failed'
-                        ? 'text-red-600'
-                        : 'text-yellow-600'
-                    }`}
-                  >
-                    {r.status}
-                  </td>
-                  <td className="px-4 py-2">
-                    {new Date(r.startTime).toLocaleString()}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* Search Bar */}
+      <div className="my-6 relative">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search by execution ID, configuration, URL, platform, or status..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+        {searchQuery && (
+          <div className="mt-2 text-sm text-gray-600">
+            Showing {filteredResults.length} of {results.length} results
+          </div>
         )}
       </div>
+
+      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+  {loading ? (
+    <p className="text-center py-8">Loading results...</p>
+  ) : error ? (
+    <p className="text-center py-8 text-red-500">{error}</p>
+  ) : filteredResults.length === 0 ? (
+    <p className="text-center py-8 text-gray-500">
+      {searchQuery ? `No test results found matching "${searchQuery}"` : "No test results found"}
+    </p>
+  ) : (
+    <div className="overflow-x-auto">   {/* <-- Added wrapper */}
+      <table className="min-w-full text-left text-sm">
+        <thead className="bg-gray-50 border-b">
+          <tr>
+            <th className="px-4 py-2">Execution ID</th>
+            <th className="px-4 py-2">Configuration</th>
+            <th className="px-4 py-2">Target URL</th>
+            <th className="px-4 py-2">Platform</th>
+            <th className="px-4 py-2">Status</th>
+            <th className="px-4 py-2">Start Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredResults.map((r) => (
+            <tr
+              key={r._id}
+              className="border-b hover:bg-gray-50 cursor-pointer"
+              onClick={() => setSelectedResult(r)}
+            >
+              <td className="px-4 py-2 font-mono">{r.executionId}</td>
+              <td className="px-4 py-2">{r.configurationId?.name || '-'}</td>
+              <td className="px-4 py-2">{r.configurationId?.targetUrl}</td>
+              <td className="px-4 py-2">{r.configurationId?.platform}</td>
+              <td
+                className={`px-4 py-2 font-medium ${
+                  r.status === 'passed'
+                    ? 'text-green-600'
+                    : r.status === 'failed'
+                    ? 'text-red-600'
+                    : 'text-yellow-600'
+                }`}
+              >
+                {r.status}
+              </td>
+              <td className="px-4 py-2">
+                {new Date(r.startTime).toLocaleString()}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</div>
+
 
       {/* Modal for detailed test result */}
       {selectedResult && (

@@ -13,10 +13,10 @@ import testRoutes from './routes/tests.js';
 import reportRoutes from './routes/reports.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
-dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+dotenv.config({ path: join(__dirname, './.env') });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
